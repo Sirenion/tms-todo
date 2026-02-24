@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tms_todo/app/app_state/auth_cubit.dart';
 import 'package:tms_todo/generated/l10n.dart';
-import 'package:tms_todo/presentation/auth/bloc/auth/auth_cubit.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

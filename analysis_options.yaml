@@ -20,4 +20,3 @@ linter:
     avoid_unnecessary_containers: true
     use_key_in_widget_constructors: true
     depend_on_referenced_packages: true
-    super_goes_last: true

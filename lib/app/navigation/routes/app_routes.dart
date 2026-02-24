@@ -1,7 +1,7 @@
 import 'package:tms_todo/app/navigation/routes/home_route.dart';
-import 'package:tms_todo/app/navigation/routes/sign_in_route.dart';
+import 'package:tms_todo/app/navigation/routes/login_route.dart';
 
 class AppRoutes {
-  final signIn = SignInRoute();
+  final login = LoginRoute();
   final home = HomeRoute();
 }

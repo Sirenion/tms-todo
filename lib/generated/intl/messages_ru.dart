@@ -22,24 +22,38 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAcc": MessageLookupByLibrary.simpleMessage("Уже есть аккаут?"),
     "auth": MessageLookupByLibrary.simpleMessage("Авторизация"),
-    "empty_email": MessageLookupByLibrary.simpleMessage(
+    "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "emptyEmail": MessageLookupByLibrary.simpleMessage(
       "Необходимо ввести email",
     ),
-    "home": MessageLookupByLibrary.simpleMessage("Главная"),
-    "incorrect_email": MessageLookupByLibrary.simpleMessage("Неверный email"),
-    "incorrect_password": MessageLookupByLibrary.simpleMessage(
-      "Пароль должен состоять как минимум из 8 символов и содержать как минимум одну заглавную букву, одну строчную букву, одну цифру и один специальный символ",
-    ),
-    "input_email": MessageLookupByLibrary.simpleMessage("Введите Email"),
-    "input_password": MessageLookupByLibrary.simpleMessage("Введите пароль"),
-    "login": MessageLookupByLibrary.simpleMessage("Войти"),
-    "logout": MessageLookupByLibrary.simpleMessage("Выйти"),
-    "or": MessageLookupByLibrary.simpleMessage("или"),
-    "password_required": MessageLookupByLibrary.simpleMessage(
+    "emptyList": MessageLookupByLibrary.simpleMessage("Список пуст"),
+    "emptyPassword": MessageLookupByLibrary.simpleMessage(
       "Необходимо ввести пароль",
     ),
+    "exampleEmail": MessageLookupByLibrary.simpleMessage("example@mail.com"),
+    "home": MessageLookupByLibrary.simpleMessage("Главная"),
+    "incorrectEmail": MessageLookupByLibrary.simpleMessage("Неверный email"),
+    "incorrectPassword": MessageLookupByLibrary.simpleMessage(
+      "Пароль должен состоять как минимум из 8 символов и содержать как минимум одну заглавную букву, одну строчную букву, одну цифру и один специальный символ",
+    ),
+    "login": MessageLookupByLibrary.simpleMessage("Войти"),
+    "loginToContinue": MessageLookupByLibrary.simpleMessage(
+      "Войдите, чтобы продолжить",
+    ),
+    "logout": MessageLookupByLibrary.simpleMessage("Выйти"),
+    "noAcc": MessageLookupByLibrary.simpleMessage("Нет аккаунта?"),
+    "or": MessageLookupByLibrary.simpleMessage("или"),
+    "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "reg": MessageLookupByLibrary.simpleMessage("Регистрация"),
+    "regToStart": MessageLookupByLibrary.simpleMessage(
+      "Создайте аккаунт, чтобы начать работу",
+    ),
     "register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+    "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
+    "somethingWentWrong": MessageLookupByLibrary.simpleMessage(
+      "Что-то пошло не так",
+    ),
   };
 }
