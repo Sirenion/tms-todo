@@ -13,8 +13,8 @@ class AuthCubit extends Cubit<AuthState> {
   Stream<bool> get authStateChanges => stream.map((user) => user.isAuthenticated);
 
   AuthCubit({required AuthRepository authService})
-      : _authService = authService,
-        super(AuthState.initial()) {
+    : _authService = authService,
+      super(AuthState.initial()) {
     _authStateChangesSubscription = _authService.userStream.listen((user) {
       if (isClosed) return;
       emit(AuthState(isAuthenticated: user != null));

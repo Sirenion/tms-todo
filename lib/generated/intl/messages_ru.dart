@@ -22,8 +22,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "add": MessageLookupByLibrary.simpleMessage("Добавить"),
+    "addTodo": MessageLookupByLibrary.simpleMessage("Добавить заметку"),
     "alreadyHaveAcc": MessageLookupByLibrary.simpleMessage("Уже есть аккаут?"),
     "auth": MessageLookupByLibrary.simpleMessage("Авторизация"),
+    "completed": MessageLookupByLibrary.simpleMessage("Выполнено"),
+    "confirm": MessageLookupByLibrary.simpleMessage("Подтвердить"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "emptyEmail": MessageLookupByLibrary.simpleMessage(
       "Необходимо ввести email",
@@ -43,6 +47,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Войдите, чтобы продолжить",
     ),
     "logout": MessageLookupByLibrary.simpleMessage("Выйти"),
+    "mustHaveTitle": MessageLookupByLibrary.simpleMessage(
+      "Заметка должна иметь название",
+    ),
     "noAcc": MessageLookupByLibrary.simpleMessage("Нет аккаунта?"),
     "or": MessageLookupByLibrary.simpleMessage("или"),
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
@@ -52,8 +59,18 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
     "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
+    "removeSuccess": MessageLookupByLibrary.simpleMessage(
+      "Заметка успешно удалена",
+    ),
     "somethingWentWrong": MessageLookupByLibrary.simpleMessage(
       "Что-то пошло не так",
     ),
+    "tmsTodo": MessageLookupByLibrary.simpleMessage("TMS-Todo"),
+    "todoDescription": MessageLookupByLibrary.simpleMessage("Описание заметки"),
+    "todoTitle": MessageLookupByLibrary.simpleMessage("Название заметки"),
+    "tooShort": MessageLookupByLibrary.simpleMessage(
+      "Название должно состоять минимум из 5 символов",
+    ),
+    "updateTodo": MessageLookupByLibrary.simpleMessage("Изменить заметку"),
   };
 }

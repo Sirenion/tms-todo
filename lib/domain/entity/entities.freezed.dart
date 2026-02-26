@@ -12,6 +12,272 @@ part of 'entities.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
+mixin _$TodoEntity {
+
+ String? get id; String get title; String get note; bool get isCompleted;
+/// Create a copy of TodoEntity
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$TodoEntityCopyWith<TodoEntity> get copyWith => _$TodoEntityCopyWithImpl<TodoEntity>(this as TodoEntity, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TodoEntity&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.note, note) || other.note == note)&&(identical(other.isCompleted, isCompleted) || other.isCompleted == isCompleted));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,id,title,note,isCompleted);
+
+@override
+String toString() {
+  return 'TodoEntity(id: $id, title: $title, note: $note, isCompleted: $isCompleted)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $TodoEntityCopyWith<$Res>  {
+  factory $TodoEntityCopyWith(TodoEntity value, $Res Function(TodoEntity) _then) = _$TodoEntityCopyWithImpl;
+@useResult
+$Res call({
+ String? id, String title, String note, bool isCompleted
+});
+
+
+
+
+}
+/// @nodoc
+class _$TodoEntityCopyWithImpl<$Res>
+    implements $TodoEntityCopyWith<$Res> {
+  _$TodoEntityCopyWithImpl(this._self, this._then);
+
+  final TodoEntity _self;
+  final $Res Function(TodoEntity) _then;
+
+/// Create a copy of TodoEntity
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? title = null,Object? note = null,Object? isCompleted = null,}) {
+  return _then(_self.copyWith(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String?,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,note: null == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
+as String,isCompleted: null == isCompleted ? _self.isCompleted : isCompleted // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [TodoEntity].
+extension TodoEntityPatterns on TodoEntity {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _TodoEntity value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _TodoEntity() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _TodoEntity value)  $default,){
+final _that = this;
+switch (_that) {
+case _TodoEntity():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _TodoEntity value)?  $default,){
+final _that = this;
+switch (_that) {
+case _TodoEntity() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  String title,  String note,  bool isCompleted)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _TodoEntity() when $default != null:
+return $default(_that.id,_that.title,_that.note,_that.isCompleted);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  String title,  String note,  bool isCompleted)  $default,) {final _that = this;
+switch (_that) {
+case _TodoEntity():
+return $default(_that.id,_that.title,_that.note,_that.isCompleted);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  String title,  String note,  bool isCompleted)?  $default,) {final _that = this;
+switch (_that) {
+case _TodoEntity() when $default != null:
+return $default(_that.id,_that.title,_that.note,_that.isCompleted);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+
+
+class _TodoEntity implements TodoEntity {
+  const _TodoEntity({required this.id, required this.title, required this.note, required this.isCompleted});
+  
+
+@override final  String? id;
+@override final  String title;
+@override final  String note;
+@override final  bool isCompleted;
+
+/// Create a copy of TodoEntity
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$TodoEntityCopyWith<_TodoEntity> get copyWith => __$TodoEntityCopyWithImpl<_TodoEntity>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TodoEntity&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.note, note) || other.note == note)&&(identical(other.isCompleted, isCompleted) || other.isCompleted == isCompleted));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,id,title,note,isCompleted);
+
+@override
+String toString() {
+  return 'TodoEntity(id: $id, title: $title, note: $note, isCompleted: $isCompleted)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$TodoEntityCopyWith<$Res> implements $TodoEntityCopyWith<$Res> {
+  factory _$TodoEntityCopyWith(_TodoEntity value, $Res Function(_TodoEntity) _then) = __$TodoEntityCopyWithImpl;
+@override @useResult
+$Res call({
+ String? id, String title, String note, bool isCompleted
+});
+
+
+
+
+}
+/// @nodoc
+class __$TodoEntityCopyWithImpl<$Res>
+    implements _$TodoEntityCopyWith<$Res> {
+  __$TodoEntityCopyWithImpl(this._self, this._then);
+
+  final _TodoEntity _self;
+  final $Res Function(_TodoEntity) _then;
+
+/// Create a copy of TodoEntity
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? title = null,Object? note = null,Object? isCompleted = null,}) {
+  return _then(_TodoEntity(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String?,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,note: null == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
+as String,isCompleted: null == isCompleted ? _self.isCompleted : isCompleted // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
+/// @nodoc
 mixin _$UserEntity {
 
  String get uid; String? get displayName; String? get email; String? get phone;

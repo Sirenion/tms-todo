@@ -4,9 +4,12 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     required this.onChanged,
     this.errorText,
-    required this.leadingIcon,
+    this.leadingIcon,
     required this.labelText,
+    this.minLines = 1,
+    this.maxLines = 1,
     this.hintText = '',
+    this.initialValue,
     this.isLoading = false,
     this.obscure,
     this.obscureText = false,
@@ -15,10 +18,13 @@ class CustomTextField extends StatelessWidget {
 
   final Function(String value) onChanged;
   final String? errorText;
-  final Icon leadingIcon;
+  final Icon? leadingIcon;
 
   final String labelText;
+  final int minLines;
+  final int maxLines;
   final String hintText;
+  final String? initialValue;
   final bool isLoading;
   final VoidCallback? obscure;
   final bool obscureText;
@@ -28,8 +34,12 @@ class CustomTextField extends StatelessWidget {
     return TextFormField(
       onChanged: onChanged,
       enabled: !isLoading,
+      initialValue: initialValue,
+      maxLines: maxLines,
+      minLines: minLines,
       obscureText: obscureText,
       decoration: InputDecoration(
+        alignLabelWithHint: true,
         prefixIcon: leadingIcon,
         suffixIcon: switch (obscure != null) {
           true => IconButton(

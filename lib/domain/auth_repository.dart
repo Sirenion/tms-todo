@@ -17,8 +17,8 @@ final class AuthRepositoryImpl implements AuthRepository {
   final AuthMapper _authMapper;
 
   AuthRepositoryImpl({required FirebaseAuth firebaseAuth, required AuthMapper authMapper})
-      : _firebaseAuth = firebaseAuth,
-        _authMapper = authMapper;
+    : _firebaseAuth = firebaseAuth,
+      _authMapper = authMapper;
 
   @override
   Stream<UserEntity?> get userStream {

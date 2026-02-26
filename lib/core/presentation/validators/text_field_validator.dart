@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tms_todo/core/presentation/validators/email_validator.dart';
 import 'package:tms_todo/core/presentation/validators/password_validator.dart';
+import 'package:tms_todo/core/presentation/validators/todo_validator.dart';
 import 'package:tms_todo/generated/l10n.dart';
 
 class TextFieldValidator {
@@ -28,6 +29,21 @@ class TextFieldValidator {
           return S.of(context).incorrectPassword;
         case PasswordValidationError.empty:
           return S.of(context).emptyPassword;
+      }
+    }
+
+    return null;
+  }
+
+  static String? validateTodo(BuildContext context, TodoValidator todo) {
+    final displayError = todo.displayError;
+
+    if (displayError != null) {
+      switch (displayError) {
+        case TodoValidationError.empty:
+          return S.of(context).mustHaveTitle;
+        case TodoValidationError.tooShort:
+          return S.of(context).tooShort;
       }
     }
 

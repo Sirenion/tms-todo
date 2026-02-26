@@ -19,5 +19,16 @@
   "regToStart": "Создайте аккаунт, чтобы начать работу",
   "register": "Зарегистрироваться",
   "alreadyHaveAcc": "Уже есть аккаут?",
-  "somethingWentWrong": "Что-то пошло не так"
+  "somethingWentWrong": "Что-то пошло не так",
+  "tmsTodo": "TMS-Todo",
+  "addTodo": "Добавить заметку",
+  "todoTitle": "Название заметки",
+  "todoDescription": "Описание заметки",
+  "add": "Добавить",
+  "mustHaveTitle": "Заметка должна иметь название",
+  "tooShort": "Название должно состоять минимум из 5 символов",
+  "removeSuccess": "Заметка успешно удалена",
+  "updateTodo": "Изменить заметку",
+  "confirm": "Подтвердить",
+  "completed": "Выполнено"
 }

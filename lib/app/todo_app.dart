@@ -6,7 +6,10 @@ import 'package:go_router/go_router.dart';
 import 'package:tms_todo/app/app_state/auth_cubit.dart';
 import 'package:tms_todo/app/navigation/app_router.dart';
 import 'package:tms_todo/data/mappers/auth_mapper.dart';
+import 'package:tms_todo/data/mappers/todo_mapper.dart';
+import 'package:tms_todo/data/todo_data_source.dart';
 import 'package:tms_todo/domain/auth_repository.dart';
+import 'package:tms_todo/domain/todo_repository.dart';
 import 'package:tms_todo/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -33,11 +36,30 @@ class TodoApp extends StatelessWidget {
             return AuthMapperImpl();
           },
         ),
+        Provider<TodoMapper>(
+          create: (context) {
+            return TodoMapperImpl();
+          },
+        ),
+        Provider<TodoDataSource>(
+          create: (context) {
+            return TodoDataSourceImpl(firebaseFirestore: context.read<FirebaseFirestore>());
+          },
+        ),
         RepositoryProvider<AuthRepository>(
           create: (context) {
             return AuthRepositoryImpl(
               firebaseAuth: context.read<FirebaseAuth>(),
               authMapper: context.read<AuthMapper>(),
+            );
+          },
+        ),
+        RepositoryProvider<TodoRepository>(
+          create: (context) {
+            return TodoRepositoryImpl(
+              firebaseAuth: context.read<FirebaseAuth>(),
+              todoDataSource: context.read<TodoDataSource>(),
+              todoMapper: context.read<TodoMapper>(),
             );
           },
         ),

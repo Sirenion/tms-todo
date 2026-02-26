@@ -213,6 +213,96 @@ class S {
       args: [],
     );
   }
+
+  /// `TMS-Todo`
+  String get tmsTodo {
+    return Intl.message('TMS-Todo', name: 'tmsTodo', desc: '', args: []);
+  }
+
+  /// `Добавить заметку`
+  String get addTodo {
+    return Intl.message(
+      'Добавить заметку',
+      name: 'addTodo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Название заметки`
+  String get todoTitle {
+    return Intl.message(
+      'Название заметки',
+      name: 'todoTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Описание заметки`
+  String get todoDescription {
+    return Intl.message(
+      'Описание заметки',
+      name: 'todoDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Добавить`
+  String get add {
+    return Intl.message('Добавить', name: 'add', desc: '', args: []);
+  }
+
+  /// `Заметка должна иметь название`
+  String get mustHaveTitle {
+    return Intl.message(
+      'Заметка должна иметь название',
+      name: 'mustHaveTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Название должно состоять минимум из 5 символов`
+  String get tooShort {
+    return Intl.message(
+      'Название должно состоять минимум из 5 символов',
+      name: 'tooShort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Заметка успешно удалена`
+  String get removeSuccess {
+    return Intl.message(
+      'Заметка успешно удалена',
+      name: 'removeSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Изменить заметку`
+  String get updateTodo {
+    return Intl.message(
+      'Изменить заметку',
+      name: 'updateTodo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Подтвердить`
+  String get confirm {
+    return Intl.message('Подтвердить', name: 'confirm', desc: '', args: []);
+  }
+
+  /// `Выполнено`
+  String get completed {
+    return Intl.message('Выполнено', name: 'completed', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
